@@ -38,3 +38,14 @@ if (file_exists($local_settings)) {
  * See: tests/installer-features/installer.feature
  */
 $settings['install_profile'] = 'standard';
+$databases['default']['default'] = array (
+  'database' => 'resistance',
+  'username' => 'root',
+  'password' => 'password',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['hash_salt'] = '3NZ0NBxGZu_-9lPqIqvnomTiIqtpFRNQK30ZeFMcBSO77J_FnfTwX62GE4zof_J9e9ba9K3n1w';
