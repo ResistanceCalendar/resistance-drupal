@@ -8,6 +8,7 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.event_type
   module:
+    - better_exposed_filters
     - node
     - taxonomy
     - user
@@ -42,7 +43,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Apply
           reset_button: false
@@ -51,6 +52,20 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          bef:
+            general:
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              autosubmit: true
+              autosubmit_hide: true
+            field_event_category_target_id:
+              bef_format: default
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
       pager:
         type: mini
         options:
