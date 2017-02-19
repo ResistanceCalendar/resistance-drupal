@@ -25,21 +25,26 @@ $config_directories = array(
 
 
 /**
- * Always install the 'standard' profile to stop the installer from
- * modifying settings.php.
- *
- * See: tests/installer-features/installer.feature
+ * remove the underscore from this file
+ * copy and paste info here from settings.php
+ * on your local install
+ * leave the rest of this file alone
  */
+
 $settings['install_profile'] = 'standard';
 $databases['default']['default'] = array (
-  'database' => 'resistance',
-  'username' => 'root',
-  'password' => 'password',
+  'database' => 'database_name',
+  'username' => 'database_user',
+  'password' => 'database_password',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+
+
+// leave the line below in place
+
 $settings['hash_salt'] = '3NZ0NBxGZu_-9lPqIqvnomTiIqtpFRNQK30ZeFMcBSO77J_FnfTwX62GE4zof_J9e9ba9K3n1w';
 
