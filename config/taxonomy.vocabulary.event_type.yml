@@ -1,0 +1,9 @@
+uuid: 53e9b583-7d67-4a8d-8023-20d71acb7c70
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event type'
+vid: event_type
+description: 'Taxonomy vocabulary for categorizing events.'
+hierarchy: 0
+weight: 0
