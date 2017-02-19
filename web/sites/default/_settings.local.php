@@ -14,7 +14,7 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *      a local development environment, to ensure that
  *      the site settings remain consistent.
  */
-// include __DIR__ . "/settings.pantheon.php";
+include __DIR__ . "/settings.pantheon.php";
 
 /**
  * Place the config directory outside of the Drupal root.
@@ -22,7 +22,6 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 $config_directories = array(
   CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
 );
-
 
 /**
  * remove the underscore from this file
@@ -43,8 +42,11 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 
-
-// leave the line below in place
+/**
+ *
+ * leave the line below in place
+ *
+ */
 
 $settings['hash_salt'] = '3NZ0NBxGZu_-9lPqIqvnomTiIqtpFRNQK30ZeFMcBSO77J_FnfTwX62GE4zof_J9e9ba9K3n1w';
 
