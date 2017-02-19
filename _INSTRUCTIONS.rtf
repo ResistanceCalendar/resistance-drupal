@@ -1,0 +1,154 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww19260\viewh8800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 INSTRUCTIONS FOR LOCAL SETUP AND GENERAL INFO
+\b0 \
+\
+This repo contains the code for a Drupal 8 website.\
+\
+Steps to install locally:\
+\
+
+\b 1. 
+\b0 Clone the repo to a folder on your computer:\
+\
+
+\b git clone git@github.com:ResistanceCalendar/resistance-drupal.git  local_folder_name
+\b0 \
+\
+
+\b 2. 
+\b0 Create a database on your computer. \
+\
+
+\b 3. 
+\b0 When setting up your local site (with MAMP or whatever you use), best to use PHP 7 (PHP 5.5.9 or higher is required for D8). Note the root folder of the site is the 
+\b /web
+\b0  folder, so point you local site to that folder:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 .git\
+.gitignore\
+.gitlab-ci.yml\
+circle.yml\
+composer.json\
+composer.lock\
+config\
+console\
+drush\
+pantheon.yml\
+README.md\
+scripts\
+tests\
+vendor\
+
+\b web
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\b 4. 
+\b0 Go to the site in your browser and you should be directed to 
+\b /core/install.php.
+\b0  Go ahead and run the install. In the step where you see the \'91Requirements review\'92 page, you may see some notices, for example 
+\i \'91PHP OPcode caching	Not enabled\'92.
+\i0  You can fix those if you like, but if there is a \'91continue anyway\'92 link at the bottom you can continue. \
+\
+
+\b 5. 
+\b0 Enter the DB name, user and pass when asked, then run the install.\
+\
+6. After install, fill in the rest of the form with anything you want, it will get replaced later when you import the database from the development site.  \
+\
+
+\b 7. 
+\b0 After finishing the install, you should have a site up and running. \
+\
+
+\b 8. 
+\b0 During the install, modifications are made to 
+\b /web/sites/default/settings.php
+\b0  to add database settings into at the bottom of the file that looks like this:\
+\
+$settings['install_profile'] = 'standard';\
+$databases['default']['default'] = array (\
+  'database' => \'91
+\b database_name
+\b0 \'92,\
+  'username' => \'91
+\b user_name
+\b0 \'92,\
+  'password' => \'91database_
+\b password
+\b0 ',\
+  'prefix' => '',\
+  'host' => 'localhost',\
+  'port' => '3306',\
+  'namespace' => 'Drupal\\\\Core\\\\Database\\\\Driver\\\\mysql',\
+  'driver' => 'mysql',\
+);\
+\
+We need to \ul remove\ulnone  that portion and put it into a 
+\b settings.local.php
+\b0  in the same folder (default). You will find a 
+\b _settings.local.php
+\b0  file in that folder. Remove the underscore on that file so you have a 
+\b settings.local.php
+\b0  like this:  
+\b /web/sites/default/settings.local.php
+\b0 \
+\
+The cut and paste the database settings code from 
+\b settings.php
+\b0  and put it where indicated in the comments in 
+\b settings.local.php
+\b0 .  Make sure that these database connection settings (the code shown above) does not remain in settings.php otherwise it will break the development site at pantheon.io. \
+\
+Note that 
+\b settings.local.php
+\b0  contains a lot of code that turns off Drupal caching.  Other ways to clear Drupal cache are:\
+- run 
+\b drush cr
+\b0  (cache rebuilt) form the 
+\b /web
+\b0  folder  (see below for install Drush)\
+- go here and click the clear cache button:  
+\b /admin/config/development/performance
+\b0   note that is also where you can turn off js and css aggregation, which of course you should do for local development, although I believe code in 
+\b settings.local.php
+\b0  turns that off anyways. \
+\
+NOTE: the development site is here:  {\field{\*\fldinst{HYPERLINK "http://dev-resistance.pantheonsite.io/"}}{\fldrslt http://dev-resistance.pantheonsite.io}}   \'85.there is a user/pass protecting view from public for now. \
+\
+General page on local Drupal development:  {\field{\*\fldinst{HYPERLINK "https://www.drupal.org/docs/develop/local-server-setup"}}{\fldrslt https://www.drupal.org/docs/develop/local-server-setup}}\
+\
+
+\b Other:
+\b0 \
+\
+Although you are ready to go now on local development, there are other things that can be done to help with local development.  The list below will be added to overt time. \
+\
+
+\b A. 
+\b0 You should definitely install 
+\b Drush
+\b0  on your computer:  {\field{\*\fldinst{HYPERLINK "http://www.drush.org/en/master/"}}{\fldrslt http://www.drush.org/en/master/}}\
+\
+B. \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
