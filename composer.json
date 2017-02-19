@@ -21,7 +21,8 @@
     "drupal/config_direct_save": "^1.0",
     "drupal/ctools": "^3.0@alpha",
     "drupal/admin_toolbar": "^1.18",
-    "drupal/devel": "^1.0@RC"
+    "drupal/devel": "^1.0@RC",
+    "drupal/address": "^1.0@RC"
   },
   "require-dev": {
     "mikey179/vfsstream": "~1.2",
