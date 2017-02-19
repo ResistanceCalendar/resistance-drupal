@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_address
     - field.field.node.event.field_event_date
     - node.type.event
   module:
+    - address
     - datetime_range
     - text
     - user
@@ -21,6 +23,12 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_address:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
   field_event_date:
     weight: 1
     label: inline
