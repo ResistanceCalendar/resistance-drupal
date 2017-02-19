@@ -1,0 +1,14 @@
+uuid: 52639c4a-1d70-45ce-bdb1-34b067cd0f31
+name: 'Resistance Calendar'
+mail: richardblakehood@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
