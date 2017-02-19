@@ -44,9 +44,9 @@ $databases['default']['default'] = array (
 
 /**
  *
- * leave the line below in place
+ * leave the lines below in place
  *
  */
-
+$settings['install_profile'] = 'standard';
 $settings['hash_salt'] = '3NZ0NBxGZu_-9lPqIqvnomTiIqtpFRNQK30ZeFMcBSO77J_FnfTwX62GE4zof_J9e9ba9K3n1w';
 
