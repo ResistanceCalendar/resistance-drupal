@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.event.field_address
     - field.field.node.event.field_event_category
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_location
     - field.field.node.event.field_tags
     - node.type.event
   module:
     - address
     - datetime_range
+    - geofield
     - path
     - text
 id: node.event.default
@@ -48,6 +50,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+  field_location:
+    weight: 26
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
   field_tags:
     weight: 9
     settings:

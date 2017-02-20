@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.event.field_address
     - field.field.node.event.field_event_category
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_location
     - field.field.node.event.field_tags
     - node.type.event
   module:
     - address
     - datetime_range
+    - geofield
     - text
     - user
 id: node.event.default
@@ -47,6 +49,13 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: daterange_default
+  field_location:
+    weight: 6
+    label: above
+    settings:
+      output_format: wkt
+    third_party_settings: {  }
+    type: geofield_default
   field_tags:
     weight: 4
     label: above
