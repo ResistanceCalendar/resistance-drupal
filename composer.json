@@ -23,7 +23,8 @@
     "drupal/admin_toolbar": "^1.18",
     "drupal/devel": "^1.0@RC",
     "drupal/address": "^1.0@RC",
-    "drupal/geofield": "^1.0@alpha"
+    "drupal/geofield": "^1.0@alpha",
+    "drupal/geocoder": "^2.0@alpha"
   },
   "require-dev": {
     "mikey179/vfsstream": "~1.2",

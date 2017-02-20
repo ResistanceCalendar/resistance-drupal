@@ -19,6 +19,7 @@ class ComposerStaticInit5fa5f0773e38c9010db5f6a7f4b10ddf
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        'a16312f9300fed4a097923eacb0ba814' => __DIR__ . '/..' . '/igorw/get-in/src/get_in.php',
         '15a4f52ecde7234868b7009f6257de9a' => __DIR__ . '/..' . '/drupal/console-core/src/constants.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
     );
@@ -96,6 +97,7 @@ class ComposerStaticInit5fa5f0773e38c9010db5f6a7f4b10ddf
         ),
         'I' => 
         array (
+            'Ivory\\HttpAdapter\\' => 18,
             'Interop\\Container\\' => 18,
         ),
         'G' => 
@@ -323,6 +325,10 @@ class ComposerStaticInit5fa5f0773e38c9010db5f6a7f4b10ddf
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
+        'Ivory\\HttpAdapter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egeloen/http-adapter/src',
+        ),
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
@@ -479,6 +485,13 @@ class ComposerStaticInit5fa5f0773e38c9010db5f6a7f4b10ddf
             'JakubOnderka\\PhpConsoleColor' => 
             array (
                 0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
+            ),
+        ),
+        'G' => 
+        array (
+            'Geocoder' => 
+            array (
+                0 => __DIR__ . '/..' . '/willdurand/geocoder/src',
             ),
         ),
         'E' => 
